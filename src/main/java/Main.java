@@ -8,8 +8,12 @@ public class Main {
 //        quickstart.submitAudioFileForTranscription();
 //        quickstart.getTranscriptionResult();
 
-        UploadingAudioFileForTranscription uploadingAudioFileForTranscription = new UploadingAudioFileForTranscription();
+//        UploadingAudioFileForTranscription uploadingAudioFileForTranscription = new UploadingAudioFileForTranscription();
 //        uploadingAudioFileForTranscription.uploadAudioFile();
 //        uploadingAudioFileForTranscription.submitUploadForTranscription();
+
+//        TranscribingDualChannelRecording transcribingDualChannelRecording = new TranscribingDualChannelRecording();
+//        transcribingDualChannelRecording.submitDualChannelAudioFileForTranscription();
+//        transcribingDualChannelRecording.getTranscriptionResult();
     }
 }
