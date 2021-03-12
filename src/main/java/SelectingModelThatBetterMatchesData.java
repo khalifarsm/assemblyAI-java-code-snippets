@@ -1,34 +1,33 @@
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
-public class BoostingAccuracyOfKeyworlds {
+public class SelectingModelThatBetterMatchesData {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
     private static final String YOUR_TRANSCRIPT_ID_HERE = "ihtczepza-8f3a-4e78-bb2c-eef88b3a4f2d";
 
-    public void boostKeywords() throws UnirestException {
+    public void choosingAnAcousticModel() throws UnirestException {
 
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
                 .header("content-type", "application/json")
-                .body("{\"audio_url\": \"https://app.assemblyai.com/static/media/phone_demo_clip_1.wav\"," +
-                        " \"word_boost\": [\"sally mcmanus\", \"the IQEZ iPhone app\"]}")
+                .body("{\"audio_url\": \"https://s3-us-west-2.amazonaws.com/blog.assemblyai.com/audio/8-7-2018-post/7510.mp3\", " +
+                        "\"acoustic_model\": \"assemblyai_en_au\"}")
                 .asString()
                 .getBody();
 
         System.out.println(responseJson);
     }
 
-    public void controlTheWeightOfBoost() throws UnirestException {
+    public void choosingLanguageModel() throws UnirestException {
 
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
                 .header("content-type", "application/json")
-                .body("{\"audio_url\": \"https://app.assemblyai.com/static/media/phone_demo_clip_1.wav\"," +
-                        " \"word_boost\": [\"sally mcmanus\", \"the IQEZ iPhone app\"]," +
-                        " \"boost_param\": \"high\"}")
+                .body("{\"audio_url\": \"https://s3-us-west-2.amazonaws.com/blog.assemblyai.com/audio/8-7-2018-post/7510.mp3\", " +
+                        "\"language_model\": \"assemblyai_media\"}")
                 .asString()
                 .getBody();
 

@@ -19,5 +19,9 @@ public class Main {
 //        BoostingAccuracyOfKeyworlds boostingAccuracyOfKeyworlds = new BoostingAccuracyOfKeyworlds();
 //        boostingAccuracyOfKeyworlds.boostKeywords();
 //        boostingAccuracyOfKeyworlds.controlTheWeightOfBoost();
+
+        SelectingModelThatBetterMatchesData selectingModelThatBetterMatchesData=new SelectingModelThatBetterMatchesData();
+        selectingModelThatBetterMatchesData.choosingAnAcousticModel();
+        selectingModelThatBetterMatchesData.choosingLanguageModel();
     }
 }
