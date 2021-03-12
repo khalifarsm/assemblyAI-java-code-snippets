@@ -24,8 +24,17 @@ public class Main {
 //        selectingModelThatBetterMatchesData.choosingAnAcousticModel();
 //        selectingModelThatBetterMatchesData.choosingLanguageModel();
 
-        GettingSpeakerLabels gettingSpeakerLabels=new GettingSpeakerLabels();
-        gettingSpeakerLabels.submitAudioFileWithSpeakerLabel();
-        gettingSpeakerLabels.getTranscriptionResult();
+//        GettingSpeakerLabels gettingSpeakerLabels=new GettingSpeakerLabels();
+//        gettingSpeakerLabels.submitAudioFileWithSpeakerLabel();
+//        gettingSpeakerLabels.getTranscriptionResult();
+
+//        GettingWebhooksWhenTranscriptionAreDone gettingWebhooksWhenTranscriptionAreDone=new GettingWebhooksWhenTranscriptionAreDone();
+//        gettingWebhooksWhenTranscriptionAreDone.specifyWebhookURL();
+//        gettingWebhooksWhenTranscriptionAreDone.getTranscriptionResult();
+
+//        TurnOffAutomaticPunctuationAndCasing turnOffAutomaticPunctuationAndCasing =new TurnOffAutomaticPunctuationAndCasing();
+//        turnOffAutomaticPunctuationAndCasing.submitAudioFileForTranscription();
+
+
     }
 }
