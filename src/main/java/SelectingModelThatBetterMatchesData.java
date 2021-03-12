@@ -7,6 +7,7 @@ public class SelectingModelThatBetterMatchesData {
 
     public void choosingAnAcousticModel() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
@@ -15,12 +16,14 @@ public class SelectingModelThatBetterMatchesData {
                         "\"acoustic_model\": \"assemblyai_en_au\"}")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }
 
     public void choosingLanguageModel() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
@@ -29,6 +32,7 @@ public class SelectingModelThatBetterMatchesData {
                         "\"language_model\": \"assemblyai_media\"}")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }

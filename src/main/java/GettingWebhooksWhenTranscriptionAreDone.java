@@ -8,6 +8,7 @@ public class GettingWebhooksWhenTranscriptionAreDone {
 
     public void specifyWebhookURL() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
@@ -16,18 +17,21 @@ public class GettingWebhooksWhenTranscriptionAreDone {
                         " \"webhook_url\": \"https://postb.in/1561597007927-8767862515524\"}")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }
 
     public void getTranscriptionResult() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .get("https://api.assemblyai.com/v2/transcript/" + YOUR_TRANSCRIPT_ID_HERE)
                 .header("authorization", YOUR_API_TOKEN)
                 .header("content-type", "application/json")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }

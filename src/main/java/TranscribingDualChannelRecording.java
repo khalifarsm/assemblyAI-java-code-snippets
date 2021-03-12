@@ -8,6 +8,7 @@ public class TranscribingDualChannelRecording {
 
     public void submitDualChannelAudioFileForTranscription() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
@@ -15,18 +16,21 @@ public class TranscribingDualChannelRecording {
                 .body("{\"audio_url\": \"https://app.assemblyai.com/static/media/phone_demo_clip_1.wav\",\"dual_channel\": true}")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }
 
     public void getTranscriptionResult() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .get("https://api.assemblyai.com/v2/transcript/" + YOUR_TRANSCRIPT_ID_HERE)
                 .header("authorization", YOUR_API_TOKEN)
                 .header("content-type", "application/json")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }

@@ -8,6 +8,7 @@ public class TurnOffAutomaticPunctuationAndCasing {
 
     public void submitAudioFileForTranscription() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
@@ -17,6 +18,7 @@ public class TurnOffAutomaticPunctuationAndCasing {
                         " \"format_text\": false}")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }

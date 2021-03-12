@@ -8,6 +8,7 @@ public class GettingSpeakerLabels {
 
     public void submitAudioFileWithSpeakerLabel() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
@@ -16,18 +17,21 @@ public class GettingSpeakerLabels {
                         " \"speaker_labels\": true}")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }
 
     public void getTranscriptionResult() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .get("https://api.assemblyai.com/v2/transcript/" + YOUR_TRANSCRIPT_ID_HERE)
                 .header("authorization", YOUR_API_TOKEN)
                 .header("content-type", "application/json")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }

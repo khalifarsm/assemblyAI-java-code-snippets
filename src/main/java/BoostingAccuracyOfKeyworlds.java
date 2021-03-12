@@ -7,6 +7,7 @@ public class BoostingAccuracyOfKeyworlds {
 
     public void boostKeywords() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
@@ -15,12 +16,14 @@ public class BoostingAccuracyOfKeyworlds {
                         " \"word_boost\": [\"sally mcmanus\", \"the IQEZ iPhone app\"]}")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }
 
     public void controlTheWeightOfBoost() throws UnirestException {
 
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .post("https://api.assemblyai.com/v2/transcript")
                 .header("authorization", YOUR_API_TOKEN)
@@ -30,6 +33,7 @@ public class BoostingAccuracyOfKeyworlds {
                         " \"boost_param\": \"high\"}")
                 .asString()
                 .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
         System.out.println(responseJson);
     }
