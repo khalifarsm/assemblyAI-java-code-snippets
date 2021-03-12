@@ -20,8 +20,12 @@ public class Main {
 //        boostingAccuracyOfKeyworlds.boostKeywords();
 //        boostingAccuracyOfKeyworlds.controlTheWeightOfBoost();
 
-        SelectingModelThatBetterMatchesData selectingModelThatBetterMatchesData=new SelectingModelThatBetterMatchesData();
-        selectingModelThatBetterMatchesData.choosingAnAcousticModel();
-        selectingModelThatBetterMatchesData.choosingLanguageModel();
+//        SelectingModelThatBetterMatchesData selectingModelThatBetterMatchesData=new SelectingModelThatBetterMatchesData();
+//        selectingModelThatBetterMatchesData.choosingAnAcousticModel();
+//        selectingModelThatBetterMatchesData.choosingLanguageModel();
+
+        GettingSpeakerLabels gettingSpeakerLabels=new GettingSpeakerLabels();
+        gettingSpeakerLabels.submitAudioFileWithSpeakerLabel();
+        gettingSpeakerLabels.getTranscriptionResult();
     }
 }
