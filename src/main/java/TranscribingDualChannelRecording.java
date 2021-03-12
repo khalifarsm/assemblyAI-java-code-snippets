@@ -4,7 +4,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 public class TranscribingDualChannelRecording {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
-    private static String YOUR_TRANSCRIPT_ID_HERE = "ihdj06xgc-1a9b-41b6-b2a8-868542aae347";
+    private static final String YOUR_TRANSCRIPT_ID_HERE = "ihdj06xgc-1a9b-41b6-b2a8-868542aae347";
 
     public void submitDualChannelAudioFileForTranscription() throws UnirestException {
 
@@ -18,7 +18,6 @@ public class TranscribingDualChannelRecording {
                 .getBody();
         // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
-        YOUR_TRANSCRIPT_ID_HERE = responseJson.split("\"")[3];
         System.out.println(responseJson);
     }
 

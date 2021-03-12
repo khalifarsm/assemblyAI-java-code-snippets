@@ -4,7 +4,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 public class GettingWebhooksWhenTranscriptionAreDone {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
-    private static String YOUR_TRANSCRIPT_ID_HERE = "ic03ywhu3-55c5-49a6-bf67-b735cb3b6fac";
+    private static final String YOUR_TRANSCRIPT_ID_HERE = "ic03ywhu3-55c5-49a6-bf67-b735cb3b6fac";
 
     public void specifyWebhookURL() throws UnirestException {
 
@@ -19,7 +19,6 @@ public class GettingWebhooksWhenTranscriptionAreDone {
                 .getBody();
         // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
-        YOUR_TRANSCRIPT_ID_HERE = responseJson.split("\"")[3];
         System.out.println(responseJson);
     }
 

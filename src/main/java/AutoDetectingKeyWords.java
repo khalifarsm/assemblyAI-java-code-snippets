@@ -4,7 +4,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 public class AutoDetectingKeyWords {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
-    private static String YOUR_TRANSCRIPT_ID_HERE = "ihtczepza-8f3a-4e78-bb2c-eef88b3a4f2d";
+    private static final String YOUR_TRANSCRIPT_ID_HERE = "ichuzlj10-8e90-4422-a84c-b129afc41e99";
 
     public void submitAudioFileForTranscriptionAndEnableAutoHighlight() throws UnirestException {
 
@@ -19,7 +19,6 @@ public class AutoDetectingKeyWords {
                 .getBody();
         // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
-        YOUR_TRANSCRIPT_ID_HERE = responseJson.split("\"")[3];
         System.out.println(responseJson);
     }
 

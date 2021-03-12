@@ -4,7 +4,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 public class GettingSpeakerLabels {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
-    private static String YOUR_TRANSCRIPT_ID_HERE = "ic0lal4kp-6d46-4d1c-9e64-4f53f6434035";
+    private static final String YOUR_TRANSCRIPT_ID_HERE = "ic0lal4kp-6d46-4d1c-9e64-4f53f6434035";
 
     public void submitAudioFileWithSpeakerLabel() throws UnirestException {
 
@@ -19,7 +19,6 @@ public class GettingSpeakerLabels {
                 .getBody();
         // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
 
-        YOUR_TRANSCRIPT_ID_HERE = responseJson.split("\"")[3];
         System.out.println(responseJson);
     }
 
