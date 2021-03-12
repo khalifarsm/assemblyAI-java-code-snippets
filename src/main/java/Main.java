@@ -35,6 +35,9 @@ public class Main {
 //        TurnOffAutomaticPunctuationAndCasing turnOffAutomaticPunctuationAndCasing =new TurnOffAutomaticPunctuationAndCasing();
 //        turnOffAutomaticPunctuationAndCasing.submitAudioFileForTranscription();
 
-
+        RedactPIIFromText redactPIIFromText=new RedactPIIFromText();
+        redactPIIFromText.redactPIIFromTranscription();
+        redactPIIFromText.customizeHowRedactedPIIIsReplaced();
+        redactPIIFromText.redactPIIFromAudio();
     }
 }
