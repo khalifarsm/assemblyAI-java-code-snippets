@@ -1,54 +1,57 @@
 public class Main {
     public static void main(String[] args) throws Exception {
-//        Quickstart quickstart = new Quickstart();
-//        quickstart.submitAudioFileForTranscriptionAndEnableAutoHieghtlight();
-//        quickstart.getTranscriptionResult();
+        Quickstart quickstart = new Quickstart();
+        quickstart.submitAudioFileForTranscription();
+        quickstart.getTranscriptionResult();
 
-//        UploadingAudioFileForTranscription uploadingAudioFileForTranscription = new UploadingAudioFileForTranscription();
-//        uploadingAudioFileForTranscription.uploadAudioFile();
-//        uploadingAudioFileForTranscription.submitUploadForTranscription();
+        UploadingAudioFileForTranscription uploadingAudioFileForTranscription = new UploadingAudioFileForTranscription();
+        uploadingAudioFileForTranscription.uploadAudioFile();
+        uploadingAudioFileForTranscription.submitUploadForTranscription();
 
-//        TranscribingDualChannelRecording transcribingDualChannelRecording = new TranscribingDualChannelRecording();
-//        transcribingDualChannelRecording.submitDualChannelAudioFileForTranscription();
-//        transcribingDualChannelRecording.getTranscriptionResult();
+        TranscribingDualChannelRecording transcribingDualChannelRecording = new TranscribingDualChannelRecording();
+        transcribingDualChannelRecording.submitDualChannelAudioFileForTranscription();
+        transcribingDualChannelRecording.getTranscriptionResult();
 
-//        BoostingAccuracyOfKeyworlds boostingAccuracyOfKeyworlds = new BoostingAccuracyOfKeyworlds();
-//        boostingAccuracyOfKeyworlds.boostKeywords();
-//        boostingAccuracyOfKeyworlds.controlTheWeightOfBoost();
+        BoostingAccuracyOfKeyworlds boostingAccuracyOfKeyworlds = new BoostingAccuracyOfKeyworlds();
+        boostingAccuracyOfKeyworlds.boostKeywords();
+        boostingAccuracyOfKeyworlds.controlTheWeightOfBoost();
 
-//        SelectingModelThatBetterMatchesData selectingModelThatBetterMatchesData=new SelectingModelThatBetterMatchesData();
-//        selectingModelThatBetterMatchesData.choosingAnAcousticModel();
-//        selectingModelThatBetterMatchesData.choosingLanguageModel();
+        SelectingModelThatBetterMatchesData selectingModelThatBetterMatchesData=new SelectingModelThatBetterMatchesData();
+        selectingModelThatBetterMatchesData.choosingAnAcousticModel();
+        selectingModelThatBetterMatchesData.choosingLanguageModel();
 
-//        GettingSpeakerLabels gettingSpeakerLabels=new GettingSpeakerLabels();
-//        gettingSpeakerLabels.submitAudioFileWithSpeakerLabel();
-//        gettingSpeakerLabels.getTranscriptionResult();
+        GettingSpeakerLabels gettingSpeakerLabels=new GettingSpeakerLabels();
+        gettingSpeakerLabels.submitAudioFileWithSpeakerLabel();
+        gettingSpeakerLabels.getTranscriptionResult();
 
-//        GettingWebhooksWhenTranscriptionAreDone gettingWebhooksWhenTranscriptionAreDone=new GettingWebhooksWhenTranscriptionAreDone();
-//        gettingWebhooksWhenTranscriptionAreDone.specifyWebhookURL();
-//        gettingWebhooksWhenTranscriptionAreDone.getTranscriptionResult();
+        GettingWebhooksWhenTranscriptionAreDone gettingWebhooksWhenTranscriptionAreDone=new GettingWebhooksWhenTranscriptionAreDone();
+        gettingWebhooksWhenTranscriptionAreDone.specifyWebhookURL();
+        gettingWebhooksWhenTranscriptionAreDone.getTranscriptionResult();
 
-//        TurnOffAutomaticPunctuationAndCasing turnOffAutomaticPunctuationAndCasing =new TurnOffAutomaticPunctuationAndCasing();
-//        turnOffAutomaticPunctuationAndCasing.submitAudioFileForTranscriptionAndEnableAutoHieghtlight();
+        TurnOffAutomaticPunctuationAndCasing turnOffAutomaticPunctuationAndCasing =new TurnOffAutomaticPunctuationAndCasing();
+        turnOffAutomaticPunctuationAndCasing.submitAudioFileForTranscriptionAndEnableAutoHighlight();
 
-//        RedactPIIFromText redactPIIFromText=new RedactPIIFromText();
-//        redactPIIFromText.redactPIIFromTranscription();
-//        redactPIIFromText.customizeHowRedactedPIIIsReplaced();
-//        redactPIIFromText.redactPIIFromAudio();
+        RedactPIIFromText redactPIIFromText=new RedactPIIFromText();
+        redactPIIFromText.redactPIIFromTranscription();
+        redactPIIFromText.customizeHowRedactedPIIIsReplaced();
+        redactPIIFromText.redactPIIFromAudio();
 
-//        ExportingTranscript exportingTranscript=new ExportingTranscript();
-//        exportingTranscript.checkStatus();
-//        exportingTranscript.exportAsVTT();
-//        exportingTranscript.exportAsSRT();
+        ExportingTranscript exportingTranscript=new ExportingTranscript();
+        exportingTranscript.checkStatus();
+        exportingTranscript.exportAsVTT();
+        exportingTranscript.exportAsSRT();
 
-//        AutoDetectingKeyWords autoDetectingKeyWords = new AutoDetectingKeyWords();
-//        autoDetectingKeyWords.submitAudioFileForTranscriptionAndEnableAutoHighlight();
-//        autoDetectingKeyWords.getTranscriptionResultAndHighLights();
+        AutoDetectingKeyWords autoDetectingKeyWords = new AutoDetectingKeyWords();
+        autoDetectingKeyWords.submitAudioFileForTranscriptionAndEnableAutoHighlight();
+        autoDetectingKeyWords.getTranscriptionResultAndHighLights();
 
-//        GivingTemporaryAccessGCS givingTemporaryAccessGCS=new GivingTemporaryAccessGCS();
-//        givingTemporaryAccessGCS.createPreSignedURL();
+        SynchronousTranscription synchronousTranscription = new SynchronousTranscription();
+        synchronousTranscription.synchronousAPICall();
 
-//        SynchronousTranscription synchronousTranscription = new SynchronousTranscription();
-//        synchronousTranscription.synchronousAPICall();
+        DeleteTranscription deleteTranscription = new DeleteTranscription();
+        deleteTranscription.delete();
+
+        GivingTemporaryAccessGCS givingTemporaryAccessGCS=new GivingTemporaryAccessGCS();
+        givingTemporaryAccessGCS.createPreSignedURL();
     }
 }
