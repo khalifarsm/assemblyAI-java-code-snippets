@@ -1,7 +1,3 @@
-import com.mashape.unirest.http.exceptions.UnirestException;
-
-import java.io.IOException;
-
 public class Main {
     public static void main(String[] args) throws Exception {
 //        Quickstart quickstart = new Quickstart();
@@ -45,8 +41,14 @@ public class Main {
 //        exportingTranscript.exportAsVTT();
 //        exportingTranscript.exportAsSRT();
 
-        AutoDetectingKeyWords autoDetectingKeyWords=new AutoDetectingKeyWords();
-        autoDetectingKeyWords.submitAudioFileForTranscriptionAndEnableAutoHighlight();
-        autoDetectingKeyWords.getTranscriptionResultAndHighLights();
+//        AutoDetectingKeyWords autoDetectingKeyWords = new AutoDetectingKeyWords();
+//        autoDetectingKeyWords.submitAudioFileForTranscriptionAndEnableAutoHighlight();
+//        autoDetectingKeyWords.getTranscriptionResultAndHighLights();
+
+//        GivingTemporaryAccessGCS givingTemporaryAccessGCS=new GivingTemporaryAccessGCS();
+//        givingTemporaryAccessGCS.createPreSignedURL();
+
+//        SynchronousTranscription synchronousTranscription = new SynchronousTranscription();
+//        synchronousTranscription.synchronousAPICall();
     }
 }
