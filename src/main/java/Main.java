@@ -15,5 +15,9 @@ public class Main {
 //        TranscribingDualChannelRecording transcribingDualChannelRecording = new TranscribingDualChannelRecording();
 //        transcribingDualChannelRecording.submitDualChannelAudioFileForTranscription();
 //        transcribingDualChannelRecording.getTranscriptionResult();
+
+//        BoostingAccuracyOfKeyworlds boostingAccuracyOfKeyworlds = new BoostingAccuracyOfKeyworlds();
+//        boostingAccuracyOfKeyworlds.boostKeywords();
+//        boostingAccuracyOfKeyworlds.controlTheWeightOfBoost();
     }
 }
