@@ -4,7 +4,6 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 public class TurnOffAutomaticPunctuationAndCasing {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
-    private static final String YOUR_TRANSCRIPT_ID_HERE = "ihtczepza-8f3a-4e78-bb2c-eef88b3a4f2d";
 
     public void submitAudioFileForTranscription() throws UnirestException {
 

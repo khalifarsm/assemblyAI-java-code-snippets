@@ -1,32 +1,44 @@
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
-public class TranscribingDualChannelRecording {
+public class ExportingTranscript {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
-    private static String YOUR_TRANSCRIPT_ID_HERE = "ihdj06xgc-1a9b-41b6-b2a8-868542aae347";
+    private static String YOUR_TRANSCRIPT_ID_HERE = "ihtczepza-8f3a-4e78-bb2c-eef88b3a4f2d";
 
-    public void submitDualChannelAudioFileForTranscription() throws UnirestException {
-
-        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
-        String responseJson = Unirest
-                .post("https://api.assemblyai.com/v2/transcript")
-                .header("authorization", YOUR_API_TOKEN)
-                .header("content-type", "application/json")
-                .body("{\"audio_url\": \"https://app.assemblyai.com/static/media/phone_demo_clip_1.wav\",\"dual_channel\": true}")
-                .asString()
-                .getBody();
-        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
-
-        YOUR_TRANSCRIPT_ID_HERE = responseJson.split("\"")[3];
-        System.out.println(responseJson);
-    }
-
-    public void getTranscriptionResult() throws UnirestException {
+    public void checkStatus() throws UnirestException {
 
         // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest
                 .get("https://api.assemblyai.com/v2/transcript/" + YOUR_TRANSCRIPT_ID_HERE)
+                .header("authorization", YOUR_API_TOKEN)
+                .header("content-type", "application/json")
+                .asString()
+                .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
+
+        System.out.println(responseJson);
+    }
+
+    public void exportAsVTT() throws UnirestException {
+
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
+        String responseJson = Unirest
+                .get("https://api.assemblyai.com/v2/transcript/" + YOUR_TRANSCRIPT_ID_HERE + "/vtt")
+                .header("authorization", YOUR_API_TOKEN)
+                .header("content-type", "application/json")
+                .asString()
+                .getBody();
+        // --------------------------------------- END OF CODE SNIPPET -----------------------------------------
+
+        System.out.println(responseJson);
+    }
+
+    public void exportAsSRT() throws UnirestException {
+
+        // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
+        String responseJson = Unirest
+                .get("https://api.assemblyai.com/v2/transcript/" + YOUR_TRANSCRIPT_ID_HERE + "/srt")
                 .header("authorization", YOUR_API_TOKEN)
                 .header("content-type", "application/json")
                 .asString()

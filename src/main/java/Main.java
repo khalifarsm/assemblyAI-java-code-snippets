@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws UnirestException, IOException {
 //        Quickstart quickstart = new Quickstart();
-//        quickstart.submitAudioFileForTranscription();
+//        quickstart.submitAudioFileForTranscriptionAndEnableAutoHieghtlight();
 //        quickstart.getTranscriptionResult();
 
 //        UploadingAudioFileForTranscription uploadingAudioFileForTranscription = new UploadingAudioFileForTranscription();
@@ -33,11 +33,20 @@ public class Main {
 //        gettingWebhooksWhenTranscriptionAreDone.getTranscriptionResult();
 
 //        TurnOffAutomaticPunctuationAndCasing turnOffAutomaticPunctuationAndCasing =new TurnOffAutomaticPunctuationAndCasing();
-//        turnOffAutomaticPunctuationAndCasing.submitAudioFileForTranscription();
+//        turnOffAutomaticPunctuationAndCasing.submitAudioFileForTranscriptionAndEnableAutoHieghtlight();
 
-        RedactPIIFromText redactPIIFromText=new RedactPIIFromText();
-        redactPIIFromText.redactPIIFromTranscription();
-        redactPIIFromText.customizeHowRedactedPIIIsReplaced();
-        redactPIIFromText.redactPIIFromAudio();
+//        RedactPIIFromText redactPIIFromText=new RedactPIIFromText();
+//        redactPIIFromText.redactPIIFromTranscription();
+//        redactPIIFromText.customizeHowRedactedPIIIsReplaced();
+//        redactPIIFromText.redactPIIFromAudio();
+
+//        ExportingTranscript exportingTranscript=new ExportingTranscript();
+//        exportingTranscript.checkStatus();
+//        exportingTranscript.exportAsVTT();
+//        exportingTranscript.exportAsSRT();
+
+        AutoDetectingKeyWords autoDetectingKeyWords=new AutoDetectingKeyWords();
+        autoDetectingKeyWords.submitAudioFileForTranscriptionAndEnableAutoHighlight();
+        autoDetectingKeyWords.getTranscriptionResultAndHighLights();
     }
 }
