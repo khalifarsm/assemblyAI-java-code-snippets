@@ -7,12 +7,12 @@ import java.util.Base64;
 
 public class SynchronousTranscription {
 
-    private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
+    private static final String YOUR_API_TOKEN = "40ff43563c9a4071b44253e15957d8c5";
 
     public void synchronousAPICall() throws Exception {
 
         // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
-        byte[] fileContent = Files.readAllBytes(new File("path/to/foo.wav").toPath());
+        byte[] fileContent = Files.readAllBytes(new File("path/to/foo2.wav").toPath());
         String base64Encoded = Base64.getEncoder().encodeToString(fileContent);
 
         String responseJson = Unirest
