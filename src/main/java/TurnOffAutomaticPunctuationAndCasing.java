@@ -5,7 +5,7 @@ public class TurnOffAutomaticPunctuationAndCasing {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
 
-    public void submitAudioFileForTranscriptionAndEnableAutoHighlight() throws UnirestException {
+    public void submitAudioFileForTranscription() throws UnirestException {
 
         // --------------------------------------- START OF CODE SNIPPET -----------------------------------------
         String responseJson = Unirest

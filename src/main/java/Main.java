@@ -29,7 +29,7 @@ public class Main {
         gettingWebhooksWhenTranscriptionAreDone.getTranscriptionResult();
 
         TurnOffAutomaticPunctuationAndCasing turnOffAutomaticPunctuationAndCasing = new TurnOffAutomaticPunctuationAndCasing();
-        turnOffAutomaticPunctuationAndCasing.submitAudioFileForTranscriptionAndEnableAutoHighlight();
+        turnOffAutomaticPunctuationAndCasing.submitAudioFileForTranscription();
 
         RedactPIIFromText redactPIIFromText = new RedactPIIFromText();
         redactPIIFromText.redactPIIFromTranscription();
