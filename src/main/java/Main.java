@@ -51,8 +51,8 @@ public class Main {
         DeleteTranscription deleteTranscription = new DeleteTranscription();
         deleteTranscription.delete();
 
-        GivingTemporaryAccessGCS givingTemporaryAccessGCS = new GivingTemporaryAccessGCS();
-        String url = givingTemporaryAccessGCS.createPreSignedURL();
-        System.out.println(url);
+//        GivingTemporaryAccessGCS givingTemporaryAccessGCS = new GivingTemporaryAccessGCS();
+//        String url = givingTemporaryAccessGCS.createPreSignedURL();
+//        System.out.println(url);
     }
 }
