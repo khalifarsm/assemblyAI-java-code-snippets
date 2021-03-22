@@ -5,12 +5,17 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+
+    private static void prepareHttpClient() {
         CloseableHttpClient httpClient = HttpClients
                 .custom()
                 .setDefaultRequestConfig(RequestConfig.custom().setCookieSpec(CookieSpecs.STANDARD).build())
                 .build();
         Unirest.setHttpClient(httpClient);
+    }
+
+    public static void main(String[] args) throws Exception {
+        prepareHttpClient();
 
         Quickstart quickstart = new Quickstart();
         quickstart.submitAudioFileForTranscription();
