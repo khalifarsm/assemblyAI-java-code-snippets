@@ -1,7 +1,7 @@
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
-public class BoostingAccuracyOfKeyworlds {
+public class BoostingAccuracyOfKeywords {
 
     private static final String YOUR_API_TOKEN = "615d6b6573404fa9a1d7cc340b4023fb";
 

@@ -12,9 +12,9 @@ public class Main {
         transcribingDualChannelRecording.submitDualChannelAudioFileForTranscription();
         transcribingDualChannelRecording.getTranscriptionResult();
 
-        BoostingAccuracyOfKeyworlds boostingAccuracyOfKeyworlds = new BoostingAccuracyOfKeyworlds();
-        boostingAccuracyOfKeyworlds.boostKeywords();
-        boostingAccuracyOfKeyworlds.controlTheWeightOfBoost();
+        BoostingAccuracyOfKeywords boostingAccuracyOfKeywords = new BoostingAccuracyOfKeywords();
+        boostingAccuracyOfKeywords.boostKeywords();
+        boostingAccuracyOfKeywords.controlTheWeightOfBoost();
 
         SelectingModelThatBetterMatchesData selectingModelThatBetterMatchesData = new SelectingModelThatBetterMatchesData();
         selectingModelThatBetterMatchesData.choosingAnAcousticModel();
